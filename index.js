@@ -1,5 +1,4 @@
-import * as _ from 'lodash';
-
+const _ = require('lodash');
 const slsHttp = require('serverless-http');
 const SlsHttpRequest = require('serverless-http/lib/request');
 const SlsHttpResponse = require('serverless-http/lib/response');
