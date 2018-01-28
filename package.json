@@ -1,0 +1,26 @@
+{
+  "name": "serverless-http-restify",
+  "version": "1.0.0",
+  "description": "combine serverless-http and restify to build api's on aws infrastructure",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drudderd/serverless-http-restify.git"
+  },
+  "author": "dries de rudder (info@drudr.be)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drudderd/serverless-http-restify/issues"
+  },
+  "homepage": "https://github.com/drudderd/serverless-http-restify#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "restify": "^6.3.4",
+    "serverless-http": "git+https://github.com/drudderd/serverless-http.git"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "0.0.30",
+    "@types/restify": "^5.0.7"
+  }
+}
