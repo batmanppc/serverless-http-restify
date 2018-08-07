@@ -11,8 +11,12 @@ patchResponse(SlsHttpResponse);
 module.exports = {
     serverless: function (app) {
         const handler = (req, res) => {
-            _.get(app, '_setupRequest').call(app, req, res);
-            _.get(app, '_handle').call(app, req, res);
+            if(!!app._onRequest)
+              _.get(app, '_onRequest').call(app, req, res);
+            else {
+              _.get(app, '_setupRequest').call(app, req, res);
+              _.get(app, '_handle').call(app, req, res);
+            }
         };
 
         return slsHttp(handler);
