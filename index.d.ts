@@ -3,4 +3,4 @@
 
 import { Server } from "restify";
 
-export function serverless(app: Server): (event: AWSLambda.APIGatewayEvent, context: AWSLambda.Context, callback: AWSLambda.ProxyCallback) => void;
+export function serverless(app: Server, opts: Object): (event: AWSLambda.APIGatewayEvent, context: AWSLambda.Context, callback: AWSLambda.ProxyCallback) => void;

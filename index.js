@@ -9,7 +9,7 @@ patchRequest(SlsHttpRequest);
 patchResponse(SlsHttpResponse);
 
 module.exports = {
-    serverless: function (app) {
+    serverless: function (app, opts = {}) {
         const handler = (req, res) => {
             if(!!app._onRequest)
               _.get(app, '_onRequest').call(app, req, res);
@@ -19,6 +19,6 @@ module.exports = {
             }
         };
 
-        return slsHttp(handler);
+        return slsHttp(handler, opts);
     }
 };
